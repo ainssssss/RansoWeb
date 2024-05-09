@@ -1,4 +1,4 @@
-![Logo](https://i.postimg.cc/KvZLHyC1/image-4.png)
+![Logo]([https://i.postimg.cc/KvZLHyC1/image-4.png](https://i.ibb.co/z5hbj7P/image.png))
 ## Descripción
 "The Ransomware Project" es un proyecto de concienciación sobre la seguridad cibernética que muestra cómo se realizan los ataques de ransomware y cómo se puede proteger contra ellos. Este proyecto incluye la implementación de un ransomware de demostración que encripta los datos del sistema operativo Windows en el que se ejecuta. Al encriptar los datos, el ransomware muestra un pop-up informando al usuario que ha sido hackeado y solicita un rescate en forma de criptomonedas para recuperar la información. Además, hay un tiempo límite para pagar; de lo contrario, los datos encriptados se publicarán en nuestra web, donde se muestran las empresas que han sido hackeadasy la amenaza de publicación de datos.
 
@@ -34,8 +34,7 @@ Para cualquier pregunta, comentario o preocupación relacionada con este proyect
 
 gerardpc2004@gmail.com
 
-unai pon aqui tu mail
-
+unaianfrun@gmail.com
 
 ## Authors
 
