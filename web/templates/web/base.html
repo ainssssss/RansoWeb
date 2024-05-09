@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'web/header_and_footer.css' %}">	
+	<link rel="stylesheet" href="{%static 'web/index.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="{% static 'web/images/logo.png' %}"></a>
+        <img src="{% static 'web/images/title.png' %}">
+    </header>
+    <section>
+        	{% block content %}{% endblock %}
+    </section>
+    
+    <footer>
+    </footer>
+
+</body>
+</html>

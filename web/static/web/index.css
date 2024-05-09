@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #1B2022;
+}
+
+.ransom_users_container{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  color: white;
+}
+
+section{
+margin: 0vh 10vw;
+
+}
+
+.ransom_user {
+width: 75%;
+  margin: 2vh 0vw;
+  padding: 1.5vw;
+  min-height: 12vh;
+  height: auto;
+  background: #000;
+}
+
+div a {
+  text-decoration: none;
+  color: white;
+}
+
+.top_user_container{
+    display: flex;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+
+.top_user_container h1 {
+  text-align: center;
+  padding-bottom: 2vh;
+}
+
+.content_user_container{
+    text-align: center;
+  background: #181A1B;
+  padding: 2vh 0vh;
+    margin-bottom: 3vh;
+}
+
+.file {
+  display: flex;
+  padding: 2vh 1vh;
+  gap: 1vw;
+  margin: 1vh 0vw;
+  background: black;
+}
+
+

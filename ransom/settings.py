@@ -25,8 +25,11 @@ SECRET_KEY = 'django-insecure-vj)384-dfall)4qyc05+owsepw=-xt$$s%l6zi$#o(-g4nn^io
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 50240
+# Calcula el equivalente en bytes para 100 GB
+gb_to_bytes = 100 * 1024 * 1024 * 1024
+DATA_UPLOAD_MAX_MEMORY_SIZE = gb_to_bytes
 
 # Application definition
 

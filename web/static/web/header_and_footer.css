@@ -1,0 +1,11 @@
+header{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  background: #131516;
+}
+
+body > header:nth-child(1) > img:nth-child(2){
+    margin: 0vw 23%;
+}

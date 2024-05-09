@@ -1,1 +1,42 @@
-<h1>test</h1>
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="ransom_users_container">
+    {% for user in UserRansom %} 
+            {% if not user.Published %}
+                <div class="ransom_user" style="border: 2px solid red;">
+            {% else %}
+                <div class="ransom_user" style="border: 2px solid green;">
+            {% endif %}
+        {% if ransom_users.Published == False %}
+        {% endif %}
+                <a href="{{user.id}}/ransomvictim/">
+
+
+        <div class="top_user_container"><h1>{{user.UserName}}</h1></div>
+        {% if not user.Published %}
+        <div class="content_user_container" style="color:red;">
+            {{ "NOT PUBLISHED" }}
+        {% else %}
+        <div class="content_user_container" style="color:green">
+            {{ "PUBLISHED" }}
+        {% endif %}
+        
+        </div>
+        <p>Total number of files : {{user.Files.all.count }}</p>
+        <p>Date : {{user.CreationDate}}</p>
+        </a>
+        </div>
+    {% endfor %}
+    
+    {% for user in EmptyUser %} 
+    <div class="ransom_user" style="border: 2px solid gray;">
+        <div class="top_user_container"><h1 style="color:black">asdasssssssssssssss</h1></div>
+        <div class="content_user_container" style="color:gray;"></div>
+        <p style="color:black">asdasdasda</p><p style="color:black">asdasda</p>
+    </div>
+    
+    {% endfor %}
+
+    {% endblock %}
